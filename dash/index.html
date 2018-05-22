@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>AngelPrime to-do List</title>
+
+        <link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css" />
+        <!--<link rel="stylesheet" href="Bootstrap3/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="Bootstrap3/js/bootstrap.min.js" />-->
+        <link rel="stylesheet" href="lib/jQuery/jquery.ui.min.css" />
+        <link rel="stylesheet" href="assets/todo.css" />
+        <link rel="stylesheet" href="assets/todo.js" />
+       <!-- <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />-->
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="bootstrap/theme.css" type="text/css">
+
+    </head>
+
+    <body style="background-image:url(fonsite.jpg);" >
+
+
+
+<div class="navbar" style="margin-top: 15px" >
+    <a class="logo" style="color: whitesmoke;">Admiagram Dashboard <br></a>
+
+        <div class="container" style="margin-left: 65px" >
+            <div class="btn-group pull-right"style="left: 250px;bottom: 1px;">
+                <button id="btnGraph" type="button" data-toggle="modal" data-target="#MyModal2" class="btn btn-default " style="border-radius: 4px">Graph<img src="chart.png"></button>
+                <button id="btnAddTsk " type="button" class="btn btn-default  " data-toggle="modal" data-target="#MyModal" style="border-radius: 4px"  >Add Task<img src="new.png"></button>
+                <button id="btnInvite" type="button" class="btn btn-default " style="border-radius: 4px">Invite<img src="inv.png"></button>
+                <button id="btnTeam" type="button" class="btn btn-default " style="border-radius: 4px">Team<img src="team.png" ></button>
+                <button  id="btnProfile" type="button" class="btn btn-default" style="border-radius: 4px">Profile<img src="prof.png"></button>
+                <a href="http://admiagram.gearhostpreview.com/login.html"><button id="btnLogout" type="button" class="btn btn-default" style=" padding-bottom: 6px;padding-top: 7px; margin-top: 0px; height: 47px; "> Logout<img src="logout.png"></button></a>
+
+
+            </div>
+            </div>
+</div>
+
+
+
+
+
+
+    <div class="container" style="margin-left: 80px; margin-top: 65px">
+
+
+            <div class="task-list task-container" id="pending" style="background-color: #00acc1">
+                <h3>Pending</h3>
+            </div>
+
+            <div class="task-list task-container" id="inProgress" style="background-color: #00e676">
+                <h3>In Progress</h3>
+            </div>
+
+            <div class="task-list task-container" id="completed"style="background-color: #76ff03">
+                <h3>Completed</h3>
+            </div>
+
+            <div class="task-list task-container" id="outstanding" style="background-color: #cd0a0a">
+                <h3>Outstanding</h3>
+            </div>
+
+            <div class="task-list task-container" id="blabla" style="background-color: yellow">
+                <h3>BlaBlaBla</h3>
+
+            </div>
+
+
+
+
+
+
+            <!--  <div class="task-list">
+                  <h3>Add a task</h3>
+                  <form id="todo-form">
+                      <input type="text" placeholder="Title" />
+                      <textarea placeholder="Description"></textarea>
+                      <input type="text" id="datepicker" placeholder="Due Date (dd/mm/yyyy)" />
+                      <input type="button" class="btn btn-primary" value="Add Task" onclick="todo.add();" />
+                  </form>
+
+                 <!-- <input type="button" class="btn btn-primary" value="Clear Data" onclick="todo.clear();" />
+
+                  <div id="delete-div">
+                      Drag Here to Delete
+                  </div>
+              </div>-->
+
+<div id="MyModal" class="modal fade" style="width: 251px; height: 320px; margin-left: 0px">
+    <div class="modal-dialog" style="top: 49px">
+        <div class="modal-content" >
+            <div class="modal-header" >
+                New Task
+                <button class="close" data-dismiss="modal"> <h6>Close</h6> </button>
+                    <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+
+                    <h3></h3>
+                    <form id="todo-form">
+                        <input type="text" name="title" placeholder="Title" />
+                        <textarea placeholder="Description"></textarea>
+                        <input type="text" id="datepicker" placeholder="Due Date (dd/mm/yyyy)" style="margin-top: 8px" />
+                        <input style="margin-left: 62px;" type="button" class="btn btn-xs" value="Add Task" onclick="todo.add();" data-dismiss="modal" />
+                    </form>
+
+                      <input style="margin-left: 58px" type="button" class="btn btn-danger btn-xs" value="Clear Data" onclick="todo.clear();" />
+                    <div id="delete-div">
+                        Drag Here to Delete
+                    </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+        <div class="container">
+<div id="MyModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <!--content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Statistics</h4>
+            </div>
+            <div class="modal-body">
+                <p>Statistic - Graph - </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+
+
+
+        <div style="clear:both;"></div>
+        <script type="text/javascript" src="lib/jQuery/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/Bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="lib/jQuery/jquery.ui.min.js"></script>
+        <script type="text/javascript" src="assets/todo.js"></script>
+
+        <script type="text/javascript">
+            $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker("option", "dateFormat", "dd/mm/yy");
+
+            $(".task-container").droppable();
+            $(".todo-task").draggable({ revert: "valid", revertDuration:200 });
+            todo.init();
+        </script>
+
+        </div>
+    </body>
+</html>
