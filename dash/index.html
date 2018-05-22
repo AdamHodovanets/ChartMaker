@@ -28,8 +28,8 @@
                 <button id="btnGraph" type="button" data-toggle="modal" data-target="#MyModal2" class="btn btn-default " style="border-radius: 4px">Graph<img src="chart.png"></button>
                 <button id="btnAddTsk " type="button" class="btn btn-default  " data-toggle="modal" data-target="#MyModal" style="border-radius: 4px"  >Add Task<img src="new.png"></button>
                 <button id="btnInvite" type="button" class="btn btn-default " style="border-radius: 4px">Invite<img src="inv.png"></button>
-                <button id="btnTeam" type="button" class="btn btn-default " style="border-radius: 4px">Team<img src="team.png" ></button>
-                <button  id="btnProfile" type="button" class="btn btn-default" style="border-radius: 4px">Profile<img src="prof.png"></button>
+                <button id="btnTeam" type="button" data-toggle="modal" data-target="#MyModal4" class="btn btn-default " style="border-radius: 4px">Team<img src="team.png" ></button>
+                <button  id="btnProfile" type="button" data-toggle="modal" data-target="#MyModal3" class="btn btn-default" style="border-radius: 4px">Profile<img src="prof.png"></button>
                 <a href="http://admiagram.gearhostpreview.com/login.html"><button id="btnLogout" type="button" class="btn btn-default" style=" padding-bottom: 6px;padding-top: 7px; margin-top: 0px; height: 47px; "> Logout<img src="logout.png"></button></a>
 
 
@@ -119,12 +119,12 @@
 </div>
         <div class="container">
 <div id="MyModal2" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm" style="top:55px">
         <!--content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Statistics</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <p>Statistic - Graph - </p>
@@ -136,7 +136,48 @@
     </div>
 </div>
         </div>
+<div class="container">
+    <div id="MyModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!--content-->
+            <div class="modal-content" style="top:60px">
+                <div class="modal-header">
+                    <h4 class="modal-title">User Info</h4>
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                                    </div>
+                <div class="modal-body">
+                    <p id="userNameInfo">Username</p>
+                    <p id="userDashInfo">User dashboards</pid>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+        <div class="container">
+            <div id="MyModal4" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <!--content-->
+                    <div class="modal-content" style="top: 47px";border-radius="4px">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Team</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="userNamesInfo">Usernames</p>
+                            <a href="">USER LINK</a>
+                            <p id="userDashInfos">Team Dash</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
